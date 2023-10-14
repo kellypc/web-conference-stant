@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_10_14_011908) do
+ActiveRecord::Schema[7.1].define(version: 2023_10_14_012557) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,6 +21,15 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_14_011908) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "lectures", force: :cascade do |t|
+    t.string "title"
+    t.string "duration"
+    t.bigint "meeting_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["meeting_id"], name: "index_lectures_on_meeting_id"
+  end
+
   create_table "meetings", force: :cascade do |t|
     t.string "period"
     t.bigint "conference_id", null: false
@@ -29,5 +38,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_14_011908) do
     t.index ["conference_id"], name: "index_meetings_on_conference_id"
   end
 
+  add_foreign_key "lectures", "meetings"
   add_foreign_key "meetings", "conferences"
 end
