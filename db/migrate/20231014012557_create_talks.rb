@@ -1,6 +1,6 @@
-class CreateLectures < ActiveRecord::Migration[7.1]
+class CreateTalks < ActiveRecord::Migration[7.1]
   def change
-    create_table :lectures do |t|
+    create_table :talks do |t|
       t.string :title
       t.string :duration
 

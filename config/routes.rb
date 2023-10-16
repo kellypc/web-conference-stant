@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
-  resources :lectures
-  resources :meetings
-  resources :conferences
+  resources :talks
 
   namespace :api do
     namespace :v1 do
-      resources :lectures
+      resources :talks
     end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

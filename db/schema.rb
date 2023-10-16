@@ -14,7 +14,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_10_14_012557) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "lectures", force: :cascade do |t|
+  create_table "talks", force: :cascade do |t|
     t.string "title"
     t.string "duration"
     t.datetime "created_at", null: false

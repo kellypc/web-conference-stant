@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :lecture do
+  factory :talk do
     title { "MyString" }
     duration { "MyString" }
   end
