@@ -1,3 +1,5 @@
-class Lecture < ApplicationRecord
-  belongs_to :meeting
+class Lecture < ActiveRecord::Base
+
+
+  # Validacoes: nao permitir titulo igual
 end
