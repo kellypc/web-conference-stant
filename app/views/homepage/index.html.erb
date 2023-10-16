@@ -1,6 +1,52 @@
-<div>
-  <h1>Conferência Web</h1>
-  <h2>Acompanhe a nossa programação!!!</h2>
+<div class="container-flouid">
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <h3>STANT</h3>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="https://www.stant.com.br/">Sobre</a>
+          </li>
+
+          <li class="nav-item">
+            <div class="nav-link active">
+              <%= link_to "Palestras", talks_path %>
+            </div>
+          </li>
+
+        </ul>
+        <form class="">
+          <div class="btn btn-outline-primary mr-2">
+            <%= link_to "Criar Palestra", new_talk_path %>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </nav>
+</div>
+
+<header class="masthead bg-primary text-white text-center">
+  <div class="container d-flex align-items-center flex-column">
+    <h1 class="masthead-heading text-uppercase m-5">Conferência Web</h1>
+    <!-- Icon Divider-->
+    <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+    </div>
+    <!-- Masthead Subheading-->
+    <h3 class="masthead-subheading font-weight-light pb-5">Acompanhe a nossa programação!!!</h3>
+  </div>
+</header>
+
+<div class="container mt-3">
   <p>Para visualizar as paletras clique no em Paletras:
     <%= link_to "Palestras", talks_path %>
   </p>
