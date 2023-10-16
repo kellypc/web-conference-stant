@@ -7,13 +7,10 @@ class Api::V1::TalksController < Api::V1::ApiController
   end
   
   def create
-    CSV.foreach(params[:talks], headers: true, col_sep: ",") do |row|
-      if row[1].nil?
-        duration = 5
-        Talk.create!(title: row[0].strip, duration: duration)
-      else
-        Talk.create!(title: row[0].strip, duration: row[1].strip.gsub("min", ""))
-      end
+    CSV.foreach(params[:talks], col_sep: ",") do |row|
+      talk = Talk.find_or_initialize_by(title: row[0].strip)
+      talk.duration = row[1]&.strip&.gsub("min", "") || "5"
+      talk.save!
     end 
 
     render json: { message: "success" }, status: :ok
