@@ -1,4 +1,4 @@
-class talksController < ApplicationController
+class TalksController < ApplicationController
   before_action :set_talk, only: %i[ show edit update destroy ]
 
   # GET /talks or /talks.json
