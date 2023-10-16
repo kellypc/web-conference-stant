@@ -13,7 +13,7 @@ class Api::V1::TalksController < Api::V1::ApiController
       talk.save!
     end 
 
-    render json: { message: "success" }, status: :ok
+    render json: { message: "Arquivo recebido com sucesso" }, status: :ok
   end
 
   def destroy
