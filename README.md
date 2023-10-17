@@ -71,5 +71,21 @@ Parameters:
 ##### Response
 
 ```sh
+
   "Arquivo recebido com sucesso"
 ```
+
+## Algumas imagens de testes realizados
+
+### Página inicial da aplicação
+
+<img width="1678" alt="Screenshot 2023-10-17 at 10 04 22" src="https://github.com/kellypc/web-conference-stant/assets/30739866/eecb8c81-54f5-4fd1-87e1-40f5fe2c5ba2">
+
+### Requisição via Postman
+
+<img width="1373" alt="Screenshot 2023-10-17 at 09 54 27" src="https://github.com/kellypc/web-conference-stant/assets/30739866/880ba9ca-abe5-464c-bf67-f2e1ecbdd3cf">
+
+### Listando as Talks
+
+![Screenshot 2023-10-17 at 09 58 27](https://github.com/kellypc/web-conference-stant/assets/30739866/3fae4d27-bd5b-4888-8f08-821a7cdb1486)
+
